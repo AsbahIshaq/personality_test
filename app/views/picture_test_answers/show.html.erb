@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Extent:</strong>
+  <%= @picture_test_answer.extent %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @picture_test_answer.user_id %>
+</p>
+
+<p>
+  <strong>Picture test:</strong>
+  <%= @picture_test_answer.picture_test_id %>
+</p>
+
+<%= link_to 'Edit', edit_picture_test_answer_path(@picture_test_answer) %> |
+<%= link_to 'Back', picture_test_answers_path %>

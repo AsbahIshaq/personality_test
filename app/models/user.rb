@@ -5,4 +5,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :objective_test_answers
+  has_many :picture_test_answers
 end
