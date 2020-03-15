@@ -60,6 +60,12 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"clickTo","qid":"1","text":"Patient 
 </script>
 </head>
 <body>
+<button class="">
+  <%= link_to 'Objective Tests', objective_test_answers_path %>
+</button>
+<button class="">
+  <%= link_to 'Picture Tests', picture_test_answers_path %>
+</button>
 <form class="jotform-form" action= <%= answer_submission_picture_test_answers_path %> method="post" accept-charset="utf-8" autocomplete="on">
   <div role="main" class="form-all">
     <ul class="form-section page-section">
