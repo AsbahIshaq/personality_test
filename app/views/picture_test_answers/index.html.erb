@@ -93,51 +93,69 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"clickTo","qid":"1","text":"Patient 
         <div id="cid_4" class="form-input-wide">
           <table summary="" role="presentation" cellPadding="4" cellSpacing="0" class="form-matrix-table" data-component="matrix">
             <tbody>
-              <tr>
-                <th style="border:none">
-                   
-                </th>
-                <th scope="col" class="form-matrix-column-headers form-matrix-column_0">
-                  <label id="label_4_col_0"> 1 </label>
-                </th>
-                <th scope="col" class="form-matrix-column-headers form-matrix-column_1">
-                  <label id="label_4_col_1"> 2 </label>
-                </th>
-                <th scope="col" class="form-matrix-column-headers form-matrix-column_2">
-                  <label id="label_4_col_2"> 3 </label>
-                </th>
-                <th scope="col" class="form-matrix-column-headers form-matrix-column_3">
-                  <label id="label_4_col_3"> 4 </label>
-                </th>
-                <th scope="col" class="form-matrix-column-headers form-matrix-column_4">
-                  <label id="label_4_col_4"> 5 </label>
-                </th>
-              </tr>
+              
               <% ObjectiveTest.all.each_with_index do |test, i| %>
                 <tr role="group" aria-labelledby="label_4 label_4_row_0">
-                <th scope="row" style="text-align:left" class="form-matrix-row-headers">
-                  <%= image_tag(image_path("picture_tests/#{i+1}.jpg"), size: "100") %>
-                </th>
-                <td style="text-align:center" class="form-matrix-values">
-                  <input type="radio" id= <%= "input_#{test.id}_0_0" %> class="form-radio" name= <%= "questions[#{test.id}]" %> value="1" aria-labelledby="label_4_col_0" />
-                  <label for= <%= "input_#{test.id}_0_0" %> style="display:none">  </label>
-                </td>
-                <td style="text-align:center" class="form-matrix-values">
-                  <input type="radio" id= <%= "input_#{test.id}_0_1" %> class="form-radio" name= <%= "questions[#{test.id}]" %> value="2" aria-labelledby="label_4_col_1" />
-                  <label for= <%= "input_#{test.id}_0_1" %> style="display:none">  </label>
-                </td>
-                <td style="text-align:center" class="form-matrix-values">
-                  <input type="radio" id= <%= "input_#{test.id}_0_2" %> class="form-radio" name= <%= "questions[#{test.id}]" %> value="3" aria-labelledby="label_4_col_2" />
-                  <label for= <%= "input_#{test.id}_0_2" %> style="display:none">  </label>
-                </td>
-                <td style="text-align:center" class="form-matrix-values">
-                  <input type="radio" id= <%= "input_#{test.id}_0_3" %> class="form-radio" name= <%= "questions[#{test.id}]" %> value="4" aria-labelledby="label_4_col_3" />
-                  <label for= <%= "input_#{test.id}_0_3" %> style="display:none">  </label>
-                </td>
-                <td style="text-align:center" class="form-matrix-values">
-                  <input type="radio" id= <%= "input_#{test.id}_0_4" %> class="form-radio" name= <%= "questions[#{test.id}]" %> value="5" aria-labelledby="label_4_col_4" />
-                  <label for= <%= "input_#{test.id}_0_4" %> style="display:none">  </label>
-                </td>
+                  <div>
+                    <th scope="row" class="form-matrix-row-headers">
+                      <%= image_tag(image_path("picture_tests/#{i+1}.jpg"), size: "100", style: "text-align: center;") %>
+                    </th>
+                  <div/>
+                  <div id="cid_28" class="form-input jf-required">
+                    <span class="form-sub-label-container " style="vertical-align:top">
+                      <table role="radiogroup" aria-labelledby="label_28 sublabel_input_28_description" cellpadding="4" cellspacing="0" class="form-scale-table" data-component="scale">
+                        <tbody>
+                          <tr>
+                            <th>
+                              &nbsp;
+                            </th>
+                            <th style="text-align:center">
+                              <label for="input_28_1"> 1 </label>
+                            </th>
+                            <th style="text-align:center">
+                              <label for="input_28_2"> 2 </label>
+                            </th>
+                            <th style="text-align:center">
+                              <label for="input_28_3"> 3 </label>
+                            </th>
+                            <th style="text-align:center">
+                              <label for="input_28_4"> 4 </label>
+                            </th>
+                            <th style="text-align:center">
+                              <label for="input_28_5"> 5 </label>
+                            </th>
+                            <th>
+                              &nbsp;
+                            </th>
+                          </tr>
+                          <tr>
+                            <td>
+                              <label for="input_28_worst" aria-hidden="true"> Ugly </label>
+                            </td>
+                            <td style="text-align:center">
+                              <input type="radio" id= <%= "input_#{test.id}_0_1" %> class="form-radio" name= <%= "questions[#{test.id}]" %> value="3" aria-labelledby="label_4_col_2" />
+                            </td>
+                            <td style="text-align:center">
+                              <input type="radio" id= <%= "input_#{test.id}_0_2" %> class="form-radio" name= <%= "questions[#{test.id}]" %> value="3" aria-labelledby="label_4_col_2" />
+                            </td>
+                            <td style="text-align:center">
+                              <input type="radio" id= <%= "input_#{test.id}_0_3" %> class="form-radio" name= <%= "questions[#{test.id}]" %> value="3" aria-labelledby="label_4_col_2" />
+                            </td>
+                            <td style="text-align:center">
+                              <input type="radio" id= <%= "input_#{test.id}_0_4" %> class="form-radio" name= <%= "questions[#{test.id}]" %> value="3" aria-labelledby="label_4_col_2" />
+                            </td>
+                            <td style="text-align:center">
+                              <input type="radio" id= <%= "input_#{test.id}_0_5" %> class="form-radio" name= <%= "questions[#{test.id}]" %> value="3" aria-labelledby="label_4_col_2" />
+                            </td>
+                            <td>
+                              <label for="input_28_best" aria-hidden="true"> Beautiful </label>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <label class="form-sub-label" id="sublabel_input_28_description" style="border:0;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;white-space:nowrap" aria-hidden="false"> 1 is Strongly Disagree, 5 is Strongly Agree </label>
+                    </span>
+                  </div>
                 </tr>
               <% end %>
             </tbody>
