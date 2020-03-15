@@ -12,26 +12,25 @@
 
 ActiveRecord::Schema.define(version: 2020_03_15_121358) do
 
-  create_table "invitations", force: :cascade do |t|
+  create_table "invitations", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "email"
   end
 
-  create_table "objective_test_answers", force: :cascade do |t|
+  create_table "objective_test_answers", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "extent"
-    t.integer "user_id"
-    t.integer "objective_test_id"
+    t.bigint "user_id"
+    t.bigint "objective_test_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["objective_test_id"], name: "index_objective_test_answers_on_objective_test_id"
     t.index ["user_id"], name: "index_objective_test_answers_on_user_id"
   end
 
-  create_table "objective_tests", force: :cascade do |t|
+  create_table "objective_tests", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "question"
-    t.string "extent"
   end
 
-  create_table "users", force: :cascade do |t|
+  create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "user_name"

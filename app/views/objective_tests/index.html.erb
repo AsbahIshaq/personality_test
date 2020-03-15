@@ -1,0 +1,15 @@
+<h1>Objective Test Questions</h1>
+ 
+<table>
+  <tr>
+    <th>Question</th>
+  </tr>
+ 
+  <% @objective_tests&.each do |test| %>
+    <tr>
+      <td><%= test.question %></td>
+    </tr>
+  <% end %>
+
+  <%= link_to 'New test', new_objective_test_path %>
+</table>
