@@ -1,0 +1,3 @@
+class ObjectiveTestsController < ApplicationController
+
+end
